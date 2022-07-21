@@ -201,11 +201,10 @@ function getTail(arr, n) {
  *    +'20,21,22,23,24\n'
  *    +'30,31,32,33,34'
  */
-// function toCsvText(arr) {
-// eslint-disable-next-line no-return-assign, no-param-reassign
-// return arr.reduce((acc, value, index) =>
-// (acc += index === arr.length - 1 ? `${value.join(',')}` : `${value.join(',')}\n`), '');
-// }
+function toCsvText(arr) {
+  // eslint-disable-next-line no-return-assign, no-param-reassign
+  return arr.reduce((acc, value, index) => (acc += index === arr.length - 1 ? `${value.join(',')}` : `${value.join(',')}\n`), '');
+}
 
 /**
  * Transforms the numeric array into the according array of squares:
@@ -583,7 +582,7 @@ module.exports = {
   insertItem,
   getHead,
   getTail,
-  // toCsvText,
+  toCsvText,
   toStringList,
   toArrayOfSquares,
   getMovingSum,
